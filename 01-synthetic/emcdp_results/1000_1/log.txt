@@ -1,0 +1,11 @@
+[2025-05-01 13:44:45] - [INFO]	- Loading reference interval set from: ../mcdp2-reproducibility/01-synthetic/data/ref_1000_1.bed
+[2025-05-01 13:44:45] - [INFO]	- Loading query interval set from: ../mcdp2-reproducibility/01-synthetic/data/query_1000_1.bed
+[2025-05-01 13:44:45] - [INFO]	- Loading chromosome sizes from: ../mcdp2-reproducibility/01-synthetic/data/genomeSize
+[2025-05-01 13:44:45] - [INFO]	- Number of reference intervals: 1000 (1000 before merging)
+[2025-05-01 13:44:45] - [INFO]	- Number of query intervals: 50000 (50000 before merging)
+[2025-05-01 13:44:45] - [INFO]	- Number of chromosomes: 1
+[2025-05-01 13:44:46] - [INFO]	- Overlap count: 475
+[2025-05-01 13:44:46] - [DEBUG]	- Processing 500-th line out of 1000 rows of DP table...
+[2025-05-01 13:44:46] - [DEBUG]	- Processing 1000-th line out of 1000 rows of DP table...
+[2025-05-01 13:44:46] - [DEBUG]	- Time taken to calculate p-value: 588.000000 milliseconds
+
