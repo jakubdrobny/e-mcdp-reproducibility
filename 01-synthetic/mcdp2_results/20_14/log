@@ -1,0 +1,10 @@
+2025-05-02 12:50:41,590 - mcdp2 - INFO - Loading chromosome lengths '01-synthetic/data/genomeSize'...
+2025-05-02 12:50:41,590 - mcdp2 - INFO - Loaded 1 chromosome lengths.
+2025-05-02 12:50:41,590 - mcdp2 - INFO - Loading reference '01-synthetic/data/ref_20_14.bed'...
+2025-05-02 12:50:41,590 - mcdp2 - INFO - Loaded 20 raw intervals.
+2025-05-02 12:50:41,590 - mcdp2 - INFO - 20 of loaded intervals are on the genome.
+2025-05-02 12:50:41,590 - mcdp2 - INFO - 20 disjoint intervals after merging.
+2025-05-02 12:50:41,590 - mcdp2 - INFO - Loading query '01-synthetic/data/query_20_14.bed'...
+2025-05-02 12:50:41,685 - mcdp2 - INFO - Loaded 50000 raw intervals.
+2025-05-02 12:50:41,691 - mcdp2 - INFO - 50000 of loaded intervals are on the genome.
+2025-05-02 12:50:41,707 - mcdp2 - INFO - 50000 disjoint intervals after merging.

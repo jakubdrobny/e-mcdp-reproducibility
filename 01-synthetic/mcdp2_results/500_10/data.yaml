@@ -1,0 +1,17 @@
+by_chromosomes:
+  chr1:
+    clt_mean: 231.1531864244567
+    clt_pvalue: 0.43421629969241005
+    clt_sd: 11.148907029753795
+    clt_zscore: 0.16564974222267692
+    overlap_count: 233
+    query_size: 50000
+    reference_size: 500
+total:
+  clt_mean: 231.1531864244567
+  clt_pvalue: 0.43421629969241005
+  clt_sd: 11.148907029753795
+  clt_zscore: 0.16564974222267692
+  overlap_count: 233
+  query_size: 50000
+  reference_size: 500
