@@ -1,0 +1,15 @@
+[2025-05-03 12:06:59] - [INFO]	- Loading reference interval set from: ./01-synthetic/data/ref_5000_10.bed
+[2025-05-03 12:06:59] - [INFO]	- Loading query interval set from: ./01-synthetic/data/query_5000_10.bed
+[2025-05-03 12:06:59] - [INFO]	- Loading chromosome sizes from: ./01-synthetic/data/genomeSize
+[2025-05-03 12:07:00] - [INFO]	- Number of reference intervals: 5000 (5000 before merging)
+[2025-05-03 12:07:00] - [INFO]	- Number of query intervals: 50000 (50000 before merging)
+[2025-05-03 12:07:00] - [INFO]	- Number of chromosomes: 1
+[2025-05-03 12:07:00] - [INFO]	- Loading window sizes...
+[2025-05-03 12:07:00] - [INFO]	- Number of windows: 1000 (1000 before preprocessing)
+[2025-05-03 12:07:00] - [INFO]	- Running WindowModel...
+[2025-05-03 12:07:00] - [INFO]	- Sorting intervals and windows...
+[2025-05-03 12:07:00] - [INFO]	- Grouping intervals and windows by chromosome...
+[2025-05-03 12:07:00] - [INFO]	- Loading windows and their intervals for chromosome: chr1
+[2025-05-03 12:07:00] - [INFO]	- Calculating probs for windows in chromsome: chr1
+[2025-05-03 12:07:01] - [DEBUG]	- Time taken to calculate p-value: 1159.000000 milliseconds
+
