@@ -85,7 +85,7 @@ find "${DATA_DIR}" -name 'ref_*.bed' | while read -r ref_file; do
         "${test_id_str}" \
         "${ref_file}"
 done | sort -k1,1n -k2,2n | while IFS=$'\t' read -r _ _ num_intervals test_id ref_file; do
-    if [ "$num_intervals" -ne 5000 ]; then
+    if [ "$num_intervals" -ne 0 ]; then
       continue 
     fi
 

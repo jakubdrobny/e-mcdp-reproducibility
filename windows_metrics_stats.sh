@@ -12,7 +12,7 @@ fi
 INPUT_DIR="$1"
 OUTPUT_DIR="$2"
 
-rm -rf "${OUTPUT_DIR}"
+# rm -rf "${OUTPUT_DIR}"
 mkdir -p "${OUTPUT_DIR}"
 
 declare -A processed_combinations
