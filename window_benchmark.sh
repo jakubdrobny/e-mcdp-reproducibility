@@ -6,7 +6,7 @@ RESULTS_DIR="01-synthetic/window_benchmark_results"
 GENOME_SIZES="${DATA_DIR}/genomeSize"
 BINARY_PATH="../code/bin/e-mcdp"
 
-rm -rf "${RESULTS_DIR}"
+# rm -rf "${RESULTS_DIR}"
 mkdir -p "${RESULTS_DIR}"
 
 ALGORITHMS=("naive" "slow_bad" "slow" "fast_bad" "fast")
@@ -85,7 +85,7 @@ find "${DATA_DIR}" -name 'ref_*.bed' | while read -r ref_file; do
         "${test_id_str}" \
         "${ref_file}"
 done | sort -k1,1n -k2,2n | while IFS=$'\t' read -r _ _ num_intervals test_id ref_file; do
-    if [ "$num_intervals" -gt 2000 ]; then
+    if [ "$num_intervals" -ne 5000 ]; then
       continue 
     fi
 
