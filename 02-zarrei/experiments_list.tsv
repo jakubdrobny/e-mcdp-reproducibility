@@ -1,0 +1,4 @@
+label	reference	query	chr_sizes
+All-genes.all.exon.tsv!inclusive.loss	inclusive.loss.tsv	All-genes.all.exon.tsv	chrom_sizes.txt
+Prot-cod.all.exon.tsv!inclusive.loss	inclusive.loss.tsv	Prot-cod.all.exon.tsv	chrom_sizes.txt
+Non-cod.all.exon.tsv!inclusive.loss	inclusive.loss.tsv	Non-cod.all.exon.tsv	chrom_sizes.txt
