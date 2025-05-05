@@ -51,7 +51,7 @@ step_divisors = [5, 10, 20]
 
 def main():
     for step in step_divisors:
-        if step != 10:
+        if step != 20:
             continue
 
         # data = load_data([f"slow_bad_div{step}.tsv", f"slow_div{step}.tsv", f"fast_bad_div{step}.tsv", f"fast_div{step}.tsv"])
@@ -63,7 +63,7 @@ def main():
                 y_col='time_seconds_avg',
                 y_label='Average Runtime (s)',
                 title='Runtime Comparison by Method',
-                output_file=f"3_method_runtime_comparison{"_log" if log else ""}.png",
+                output_file=f"3_method_runtime_comparison{"_log" if log else ""}_step{step}.png",
                 log=log
             )
 
@@ -73,7 +73,7 @@ def main():
                 y_col='mem_mb_avg',
                 y_label='Average Memory Usage (MB)',
                 title='Memory Usage Comparison by Method',
-                output_file=f"3_method_memory_comparison{"_log" if log else ""}.png",
+                output_file=f"3_method_memory_comparison{"_log" if log else ""}_step{step}.png",
                 log=log
             )
 
