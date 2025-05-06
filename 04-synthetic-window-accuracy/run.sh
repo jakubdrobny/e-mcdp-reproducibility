@@ -46,7 +46,8 @@ for label in "${window_sizes[@]}"; do
         echo "  Chr sizes: ${chr_sizes_file}"
         echo "  Output dir: ${output_dir}"
 
-        step_size=$((label / 10))
+        # step_size=$((label / 10))
+        step_size=$(( label / 10 > 5000 ? 5000 : label / 10))
 
         cmd=(
             "${BINARY_PATH}"
