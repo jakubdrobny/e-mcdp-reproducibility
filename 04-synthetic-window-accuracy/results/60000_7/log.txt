@@ -1,0 +1,13 @@
+[2025-05-06 19:47:50] - [INFO]	- Loading reference interval set from: /home/jakubd/skola/Bakalarska-praca/reproducibility/04-synthetic-window-accuracy/data/ref_7.bed
+[2025-05-06 19:47:50] - [INFO]	- Loading query interval set from: /home/jakubd/skola/Bakalarska-praca/reproducibility/04-synthetic-window-accuracy/data/query_7.bed
+[2025-05-06 19:47:50] - [INFO]	- Loading chromosome sizes from: /home/jakubd/skola/Bakalarska-praca/reproducibility/04-synthetic-window-accuracy/data/chr_sizes.txt
+[2025-05-06 19:47:50] - [INFO]	- Number of reference intervals: 926 (927 before merging)
+[2025-05-06 19:47:50] - [INFO]	- Number of query intervals: 866 (866 before merging)
+[2025-05-06 19:47:50] - [INFO]	- Number of chromosomes: 1
+[2025-05-06 19:47:50] - [INFO]	- Loading window sizes...
+[2025-05-06 19:47:50] - [INFO]	- Number of windows: 158 (158 before preprocessing)
+[2025-05-06 19:47:50] - [INFO]	- Running WindowModel...
+[2025-05-06 19:47:50] - [INFO]	- Sorting intervals and windows...
+[2025-05-06 19:47:50] - [INFO]	- Grouping intervals and windows by chromosome...
+[2025-05-06 19:47:51] - [DEBUG]	- Time taken to calculate p-value: 418.000000 milliseconds
+
