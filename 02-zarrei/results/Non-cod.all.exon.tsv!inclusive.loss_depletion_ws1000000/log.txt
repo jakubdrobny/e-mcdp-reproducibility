@@ -1,0 +1,13 @@
+[2025-05-18 23:46:50] - [INFO]	- Loading reference interval set from: /home/jakubd/skola/Bakalarska-praca/reproducibility/02-zarrei/data/inclusive.loss.tsv
+[2025-05-18 23:46:50] - [INFO]	- Loading query interval set from: /home/jakubd/skola/Bakalarska-praca/reproducibility/02-zarrei/data/Non-cod.all.exon.tsv
+[2025-05-18 23:46:50] - [INFO]	- Loading chromosome sizes from: /home/jakubd/skola/Bakalarska-praca/reproducibility/02-zarrei/data/chrom_sizes.txt
+[2025-05-18 23:46:50] - [INFO]	- Number of reference intervals: 23438 (23438 before merging)
+[2025-05-18 23:46:50] - [INFO]	- Number of query intervals: 9975 (15292 before merging)
+[2025-05-18 23:46:50] - [INFO]	- Number of chromosomes: 24
+[2025-05-18 23:46:50] - [INFO]	- Loading window sizes...
+[2025-05-18 23:46:50] - [INFO]	- Number of windows: 30754 (30754 before preprocessing)
+[2025-05-18 23:46:50] - [INFO]	- Running WindowModel...
+[2025-05-18 23:46:50] - [INFO]	- Sorting intervals and windows...
+[2025-05-18 23:46:50] - [INFO]	- Grouping intervals and windows by chromosome...
+[2025-05-18 23:46:54] - [DEBUG]	- Time taken to calculate p-value: 4149.000000 milliseconds
+
