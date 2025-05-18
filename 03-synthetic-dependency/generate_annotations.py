@@ -82,7 +82,7 @@ def main():
     parser.add_argument('-o', '--output-dir', type=str, help='output directory')
     args = parser.parse_args()
 
-    for dep_fac10 in range(100, 155, 5):
+    for dep_fac10 in range(100, 201, 10):
         dep_fac = dep_fac10 / 100
         for test_run in range(1, 11):
             ref_ints, chroms = generate_random_annotation()
