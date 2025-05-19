@@ -6,18 +6,17 @@ import re
 from collections import defaultdict
 
 RESULTS_DIR = "results"
-PLOT_FILENAME_GE_200K = "plot_median_ws_ge_200k.png" # Updated filename
-PLOT_FILENAME_LE_200K = "plot_median_ws_le_200k.png" # Updated filename
+PLOT_FILENAME_GE_200K = "plot_median_ws_ge_200k.png" 
+PLOT_FILENAME_LE_200K = "plot_median_ws_le_200k.png"
 WINDOW_SIZE_THRESHOLD = 200000
 
-# Font and figure size definitions
 TITLE_FONTSIZE = 24
 AXIS_LABEL_FONTSIZE = 20
 TICK_LABEL_FONTSIZE = 18
-LEGEND_FONTSIZE = 14 # Slightly reduced for internal legend, can be adjusted
-LEGEND_TITLE_FONTSIZE = 16 # Slightly reduced for internal legend
-FIGURE_WIDTH = 16 # Adjusted width as legend is now internal
-FIGURE_HEIGHT = 10
+LEGEND_FONTSIZE = 14 
+LEGEND_TITLE_FONTSIZE = 16 
+FIGURE_WIDTH = 14
+FIGURE_HEIGHT = 8
 MARKER_SIZE = 5
 
 
@@ -158,14 +157,11 @@ def create_plot_for_window_range(median_data, output_filename, plot_title_suffix
 
     handles, labels = ax.get_legend_handles_labels()
     if handles:
-        # Legend inside the plot, 'best' tries to find a good spot
-        # Removed bbox_to_anchor
-        legend = ax.legend(title="Legend", loc='best', # You can try 'upper right', 'lower left', etc.
-                           borderaxespad=0.5, # Padding inside legend box
+        legend = ax.legend(title="Legend", loc='best',
+                           borderaxespad=0.5, 
                            fontsize=LEGEND_FONTSIZE)
         plt.setp(legend.get_title(), fontsize=LEGEND_TITLE_FONTSIZE)
     
-    # Use tight_layout without rect to use full figure width
     plt.tight_layout() 
 
     try:

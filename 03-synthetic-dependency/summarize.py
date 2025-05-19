@@ -107,7 +107,7 @@ def plot_pvalues(pvalues, dependency_factors_str):
     LEGEND_FONTSIZE = 18
 
     # Increased figure size and marker size
-    plt.figure(figsize=(16, 10)) 
+    plt.figure(figsize=(14, 7)) 
     
     plt.plot(x_values, pvalues['chr1'], 
              'o-', label='Chromosome 1 (dependent) - Median p-value', color='#1f77b4', markersize=8) # Larger marker
