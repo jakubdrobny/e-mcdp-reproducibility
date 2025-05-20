@@ -34,14 +34,17 @@ def plot_comparison(data, y_col, y_label, title, output_file, log=False):
         plt.yscale('log')
     else:
         plt.grid(True, which='both', linestyle='--', alpha=0.7)
-    plt.xlabel('Number of Reference Intervals', fontsize=12)
-    plt.ylabel(y_label, fontsize=12)
-    plt.title(title, fontsize=14)
-    plt.legend(fontsize=12)
+    plt.xlabel('Number of Reference Intervals', fontsize=20)
+    plt.ylabel(y_label, fontsize=20)
+    plt.title(title, fontsize=24)
+    plt.legend(fontsize=18)
     
     plt.gca().xaxis.set_major_formatter(ticker.ScalarFormatter())
     plt.gca().yaxis.set_major_formatter(ticker.ScalarFormatter())
     
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
+
     plt.tight_layout()
     plt.savefig(output_file, dpi=300)
     plt.close()
@@ -51,7 +54,7 @@ step_divisors = [5, 10, 20]
 
 def main():
     for step in step_divisors:
-        if step != 20:
+        if step not in [20, 10]:
             continue
 
         # data = load_data([f"slow_bad_div{step}.tsv", f"slow_div{step}.tsv", f"fast_bad_div{step}.tsv", f"fast_div{step}.tsv"])
@@ -63,7 +66,7 @@ def main():
                 y_col='time_seconds_avg',
                 y_label='Average Runtime (s)',
                 title='Runtime Comparison by Method',
-                output_file=f"3_method_runtime_comparison{"_log" if log else ""}_step{step}.png",
+                output_file=f"3_method_runtime_comparison{"_log" if log else ""}{f"_step{step}" if step == 20 else ""}.png",
                 log=log
             )
 
@@ -73,7 +76,7 @@ def main():
                 y_col='mem_mb_avg',
                 y_label='Average Memory Usage (MB)',
                 title='Memory Usage Comparison by Method',
-                output_file=f"3_method_memory_comparison{"_log" if log else ""}_step{step}.png",
+                output_file=f"3_method_memory_comparison{"_log" if log else ""}{f"_step{step}" if step == 20 else ""}.png",
                 log=log
             )
 

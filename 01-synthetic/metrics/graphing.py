@@ -32,13 +32,16 @@ def plot_comparison(data, y_col, y_label, title, output_file, log=False):
         plt.yscale('log')
     else:
         plt.grid(True, which='both', linestyle='--', alpha=0.7)
-    plt.xlabel('Number of Reference Intervals', fontsize=12)
-    plt.ylabel(y_label, fontsize=12)
-    plt.title(title, fontsize=14)
-    plt.legend(fontsize=12)
+    plt.xlabel('Number of Reference Intervals', fontsize=20)
+    plt.ylabel(y_label, fontsize=20)
+    plt.title(title, fontsize=24)
+    plt.legend(fontsize=18)
     
     plt.gca().xaxis.set_major_formatter(ticker.ScalarFormatter())
     plt.gca().yaxis.set_major_formatter(ticker.ScalarFormatter())
+
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
     
     plt.tight_layout()
     plt.savefig(output_file, dpi=300)

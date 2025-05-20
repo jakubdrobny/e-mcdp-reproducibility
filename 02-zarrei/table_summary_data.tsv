@@ -1,0 +1,7 @@
+Annotation Type	Test Type	Total Significant Windows	No. Chromosomes with Significant Window(s)	Most Significant Region (Chr:Start-End)	Max -log10(Adj. P-value)	eMCDP time (s)
+All-genes.all.exon.tsv	depletion	470	22	chr19:28500000-29500000	87.53493483420327	5.5100
+All-genes.all.exon.tsv	enrichment	0	0	N/A	N/A	5.5800
+Non-cod.all.exon.tsv	depletion	0	0	N/A	N/A	4.1500
+Non-cod.all.exon.tsv	enrichment	2	1	chr15:25200000-26200000	2.0449977570478675	4.1600
+Prot-cod.all.exon.tsv	depletion	597	22	chr19:28500000-29500000	84.7940022448705	5.6600
+Prot-cod.all.exon.tsv	enrichment	0	0	N/A	N/A	5.3700
