@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage: bash summarize_metrics.sh <input_dir> <output_dir>
-# Example: bash summarize_metrics.sh 01-synthetic/window_benchmark_results 01-synthetic/window_benchmark_metrics
+# Example: bash summarize_metrics.sh window_benchmark_results window_benchmark_metrics
 
 if [ $# -ne 2 ]; then
     echo "Error: Invalid number of arguments"

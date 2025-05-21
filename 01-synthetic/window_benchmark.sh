@@ -1,10 +1,15 @@
 #!/bin/bash
 
-BASE_DIR="./01-synthetic"
+BASE_DIR="."
 DATA_DIR="${BASE_DIR}/data"
-RESULTS_DIR="01-synthetic/window_benchmark_results"
+RESULTS_DIR="window_benchmark_results"
 GENOME_SIZES="${DATA_DIR}/genomeSize"
-BINARY_PATH="../code/bin/e-mcdp"
+BINARY_PATH="../../code/bin/e-mcdp"
+
+if [ ! -f "$BINARY_PATH" ]; then
+  echo "Error: emcdp binary not found at $BINARY_PATH"
+  exit 1
+fi
 
 # rm -rf "${RESULTS_DIR}"
 mkdir -p "${RESULTS_DIR}"

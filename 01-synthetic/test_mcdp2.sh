@@ -1,12 +1,12 @@
 #!/bin/bash
 
-BASE_DIR="01-synthetic"
+BASE_DIR="."
 DATA_DIR="${BASE_DIR}/data"
-RESULTS_DIR="01-synthetic/mcdp2_results"
+RESULTS_DIR="mcdp2_results"
 GENOME_SIZES="${DATA_DIR}/genomeSize"
 BINARY_PATH="mcdp2"
 
-rm -rf "${RESULTS_DIR}"
+#rm -rf "${RESULTS_DIR}"
 mkdir -p "${RESULTS_DIR}"
 
 run_testcase() {

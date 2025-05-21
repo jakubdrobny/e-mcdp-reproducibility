@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage: bash summarize_metrics.sh <input_dir> <output_file>
-# Example: bash summarize_metrics.sh 01-synthetics/mcdp_results 01-synthetic/metrics/mcdp.tsv
+# Example: bash summarize_metrics.sh mcdp_results metrics/mcdp.tsv
 
 if [ $# -ne 2 ]; then
     echo "Error: Invalid number of arguments"

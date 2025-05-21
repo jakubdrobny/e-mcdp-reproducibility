@@ -1,12 +1,17 @@
 #!/bin/bash
 
-BASE_DIR="../mcdp2-reproducibility/01-synthetic"
+BASE_DIR="."
 DATA_DIR="${BASE_DIR}/data"
-RESULTS_DIR="01-synthetic/results"
+RESULTS_DIR="mcdp_results"
 GENOME_SIZES="${DATA_DIR}/genomeSize"
-BINARY_PATH="../code/bin/e-mcdp"
+BINARY_PATH="../../testing/mc-overlaps/src/mcdp.py"
 
-rm -rf "${RESULTS_DIR}"
+if [ ! -f "$BINARY_PATH" ]; then
+  echo "Error: mcdp binary not found at $BINARY_PATH"
+  exit 1
+fi
+
+#rm -rf "${RESULTS_DIR}"
 mkdir -p "${RESULTS_DIR}"
 
 run_testcase() {
@@ -23,12 +28,12 @@ run_testcase() {
     local metrics_file="${output_dir}/metrics.tsv"
     
     local cmd=(
-        "${BINARY_PATH}"
-        --r "${ref_file}"
-        --q "${query_file}"
-        --chs "${GENOME_SIZES}"
+        python3 "${BINARY_PATH}"
+        "${ref_file}"
+        "${query_file}"
+        "${GENOME_SIZES}"
         --log "${log_file}"
-        --o "${output_file}"
+        --output "${output_file}"
     )
     
     echo -e "real_time\tuser_time\tsys_time\tmax_rss\texit_status" > "${metrics_file}"
@@ -40,6 +45,9 @@ run_testcase() {
     
     echo "Processed ${num_intervals}_${test_id}"
 }
+
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate mcdp
 
 find "${DATA_DIR}" -name 'ref_*.bed' | while read -r ref_file; do
     filename=$(basename "${ref_file}")
