@@ -4,7 +4,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="${SCRIPT_DIR}"
 DATA_DIR="${BASE_DIR}/data"
 RESULTS_DIR="${BASE_DIR}/results"
-BINARY_PATH="../../code/bin/e-mcdp"
+BINARY_PATH="../../code/bin/emcdp"
 CHR_SIZES_BASENAME="chr_sizes.txt" 
 
 mkdir -p "${RESULTS_DIR}"

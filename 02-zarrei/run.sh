@@ -5,7 +5,7 @@ BASE_DIR="${SCRIPT_DIR}"
 DATA_DIR="${BASE_DIR}/data"
 RESULTS_DIR="${BASE_DIR}/results"
 EXPERIMENTS_LIST="${BASE_DIR}/experiments_list.tsv"
-BINARY_PATH="../../code/bin/e-mcdp"
+BINARY_PATH="../../code/bin/emcdp"
 
 mkdir -p "${RESULTS_DIR}"
 
