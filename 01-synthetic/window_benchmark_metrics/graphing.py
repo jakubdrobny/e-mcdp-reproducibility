@@ -65,7 +65,7 @@ def main():
                 data,
                 y_col='time_seconds_avg',
                 y_label='Average Runtime (s)',
-                title='Runtime Comparison by Method',
+                title=f"Runtime Comparison by Method with Ratio of {step}",
                 output_file=f"3_method_runtime_comparison{"_log" if log else ""}{f"_step{step}" if step == 20 else ""}.png",
                 log=log
             )
@@ -75,7 +75,7 @@ def main():
                 data,
                 y_col='mem_mb_avg',
                 y_label='Average Memory Usage (MB)',
-                title='Memory Usage Comparison by Method',
+                title=f"Memory Usage Comparison by Method with Ratio of {step}",
                 output_file=f"3_method_memory_comparison{"_log" if log else ""}{f"_step{step}" if step == 20 else ""}.png",
                 log=log
             )
