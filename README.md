@@ -35,3 +35,11 @@ It consists of:
 - `run.sh` bash script, which was used to run the analysis for the tests mentioned in the first item of this list. the path to the binary again assumes it is located at `../../code/bin/emcdp`, it can be changed to whatever you want
 - `generate_annotations.py` python script used to generate annotations as described in the Significance detection section of the thesis
 - `summarize.py` python script used to generate graphs from the results of the analyses (requires `pandas`, `numpy` and `matplotlib`)
+
+## References
+
+> [1] Mehdi Zarrei, Jeffrey R. MacDonald, Daniele Merico, and Stephen W. Scherer.
+> A copy number variation map of the human genome. Nature Reviews Genetics,
+> 16(3):172–183, Mar 2015
+
+> [2] Askar Gafurov, Tomáš Vinař, Paul Medvedev, Bronislava Brejová. Efficient Analysis of Annotation Colocalization Accounting for Genomic Contexts. In: Ma, J. (eds) Research in Computational Molecular Biology. RECOMB 2024. Lecture Notes in Computer Science, vol 14758. Springer, Cham. https://doi.org/10.1007/978-1-0716-3989-4_3
