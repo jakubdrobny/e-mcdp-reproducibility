@@ -2,6 +2,19 @@
 
 This repository contains the data used for the experiments.
 
+## 01-synthetic
+
+This directory contains data and results of time and memory experiments comparing eMCDP, MCDP [3] and MCDP[2] when performing whole-genome analysis and comparing the variants of eMCDP. The dataset used is the *01-synthetic* dataset from the [mcdp2-reproducibility repository](https://github.com/fmfi-compbio/mcdp2-reproducibility), which is the reproducibility repository for the MCDP2 study [2].
+
+This directory consists of:
+- `data/` directory containing the *01-synthetic* dataset from the [mcdp2-reproducibility repository](https://github.com/fmfi-compbio/mcdp2-reproducibility), which is the reproducibility repository for the MCDP2 study [2], which containes chromosome sizes and reference annotations in files `ref_{annotation_size}_{test_id}.bed` and query annotations in files `query_{annotation_size}_{test_id}.bed`
+- `{emcdp|mcdp|mcdp2}_results/` directories each consisiting of directories `{annotation_size}_{test_id}`, each of these directories contains a log file (`log.txt`), metrics file (`metrics.tsv`) and the output file (`output.tsv`)
+- `test_emcdp.sh`, `test_mcdp.sh` and `test_mcdp2.sh` bash script used for comparing each software on the `data/` dataset, produces results into the respective `{emcdp|mcdp|mcdp2}_results/` directory. the scripts assume the emcdp binary is located at `../../code/bin/emcdp`, the mcdp repository is located at `../../testing/mc-overlaps` and the mcdp2 is installed on the system as per its installation guide. the locations can be changed to whatever you want 
+- `metrics/` directory containing the summarized metrics from `{emcdp|mcdp|mcdp2}_results/` directories and a `graphing.py` python script for converting the summaries into graphs (requires `pands` and `matplotlib`)
+- `metrics_stats.sh` bash script, which summarizes the metrics from `{emcdp|mcdp|mcdp2}_results/` into the `metrics/` directory. the path to the binary assumes it is located at `../../code/bin/emcdp` when running the script from its location, it can be changed to whatever you want
+- `window_benchmark_results/` directory contains the results of variant comparison on the `data/` directory running a window analysis with window size to window step ratiof 5, 10 and 20. the directory is populated by the `window_benchmark.sh` bash script which assumes the location of the emcdp binary is `../../code/bin/emcdp`
+- `window_benchmak_metrics/` directory cotains the summary of metrics for each combination of `{naive|slow_bad|slow|fast_bad|fast}_div{step_ratio=5|10|20}` and a `graphing.py` python script used to create the graph for the thesis (requires `pandas` and `matplotlib`)
+
 ## 02-zarrei
 
 This directory contains data and results of experiments on the Zarrei et al. (2015) [1] dataset, which we got from the [mcdp2-reproducibility repository](https://github.com/fmfi-compbio/mcdp2-reproducibility), which is the reproducibility repository for the MCDP2 study [2].
@@ -43,3 +56,7 @@ It consists of:
 > 16(3):172–183, Mar 2015
 
 > [2] Askar Gafurov, Tomáš Vinař, Paul Medvedev, Bronislava Brejová. Efficient Analysis of Annotation Colocalization Accounting for Genomic Contexts. In: Ma, J. (eds) Research in Computational Molecular Biology. RECOMB 2024. Lecture Notes in Computer Science, vol 14758. Springer, Cham. https://doi.org/10.1007/978-1-0716-3989-4_3
+
+> [3] Askar Gafurov, Bronislava Brejová, Paul Medvedev.
+> Markov chains improve the significance computation of overlapping genome annotations,
+> Bioinformatics, Volume 38, Issue Supplement_1, July 2022, Pages i203–i211, https://doi.org/10.1093/bioinformatics/btac255
